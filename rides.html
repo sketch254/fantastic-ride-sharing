@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse available carpool rides on Ride-My-Way.">
+    <title>Find a Ride — Ride-My-Way</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <span class="brand-mark" aria-hidden="true"><span></span></span>
+            Ride-My-Way
+        </a>
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu">☰</label>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="rides.html" aria-current="page">Find a Ride</a>
+            <a href="offer.html">Offer a Ride</a>
+            <a href="requests.html">My Requests</a>
+            <a href="profile.html">Profile</a>
+            <a href="account.html">Account</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="page-intro">
+            <h1>Available rides</h1>
+            <p>Every ride below has open seats right now. Expand a listing for pickup details,
+            then request a spot.</p>
+        </div>
+
+        <div class="field" style="max-width: 320px;">
+            <label for="destination-filter">Filter by destination</label>
+            <select id="destination-filter" name="destination-filter">
+                <option value="">All destinations</option>
+                <option value="cbd">Nairobi CBD</option>
+                <option value="westlands">Westlands</option>
+                <option value="karen">Karen</option>
+            </select>
+        </div>
+
+        <ul class="ticket-list">
+            <li class="ticket">
+                <div class="ticket__route">
+                    <div class="ticket__stop">
+                        <span class="ticket__dot" aria-hidden="true"></span>
+                        Kilimani
+                    </div>
+                    <div class="ticket__path" aria-hidden="true"></div>
+                    <div class="ticket__stop">
+                        <span class="ticket__dot ticket__dot--end" aria-hidden="true"></span>
+                        CBD
+                    </div>
+                </div>
+                <div class="ticket__perforation"></div>
+                <div class="ticket__details">
+                    <dl>
+                        <dt>Departs</dt>
+                        <dd><time datetime="2026-09-09T07:30">Tomorrow, 7:30 AM</time></dd>
+                        <dt>Seats left</dt>
+                        <dd>3</dd>
+                        <dt>Fare</dt>
+                        <dd>KSh 150</dd>
+                    </dl>
+                    <details>
+                        <summary>Pickup &amp; driver details</summary>
+                        <dl>
+                            <dt>Driver</dt><dd>Amina K.</dd>
+                            <dt>Vehicle</dt><dd>Silver Toyota Vitz</dd>
+                            <dt>Pickup point</dt><dd>Yaya Centre gate</dd>
+                        </dl>
+                    </details>
+                    <a href="ride-detail.html" class="btn btn--ghost">View full details</a>
+                    <button type="button" class="btn btn--primary">Request to join</button>
+                </div>
+            </li>
+
+            <li class="ticket">
+                <div class="ticket__route">
+                    <div class="ticket__stop">
+                        <span class="ticket__dot" aria-hidden="true"></span>
+                        Westlands
+                    </div>
+                    <div class="ticket__path" aria-hidden="true"></div>
+                    <div class="ticket__stop">
+                        <span class="ticket__dot ticket__dot--end" aria-hidden="true"></span>
+                        Karen
+                    </div>
+                </div>
+                <div class="ticket__perforation"></div>
+                <div class="ticket__details">
+                    <dl>
+                        <dt>Departs</dt>
+                        <dd><time datetime="2026-09-09T17:00">Tomorrow, 5:00 PM</time></dd>
+                        <dt>Seats left</dt>
+                        <dd>1</dd>
+                        <dt>Fare</dt>
+                        <dd>KSh 250</dd>
+                    </dl>
+                    <details>
+                        <summary>Pickup &amp; driver details</summary>
+                        <dl>
+                            <dt>Driver</dt><dd>John D.</dd>
+                            <dt>Vehicle</dt><dd>White Honda Fit</dd>
+                            <dt>Pickup point</dt><dd>Sarit Centre</dd>
+                        </dl>
+                    </details>
+                    <a href="ride-detail.html" class="btn btn--ghost">View full details</a>
+                    <button type="button" class="btn btn--primary">Request to join</button>
+                </div>
+            </li>
+
+            <li class="ticket">
+                <div class="ticket__route">
+                    <div class="ticket__stop">
+                        <span class="ticket__dot" aria-hidden="true"></span>
+                        Ngong Road
+                    </div>
+                    <div class="ticket__path" aria-hidden="true"></div>
+                    <div class="ticket__stop">
+                        <span class="ticket__dot ticket__dot--end" aria-hidden="true"></span>
+                        CBD
+                    </div>
+                </div>
+                <div class="ticket__perforation"></div>
+                <div class="ticket__details">
+                    <dl>
+                        <dt>Departs</dt>
+                        <dd><time datetime="2026-09-10T08:00">Thu, 8:00 AM</time></dd>
+                        <dt>Seats left</dt>
+                        <dd>4</dd>
+                        <dt>Fare</dt>
+                        <dd>KSh 100</dd>
+                    </dl>
+                    <details>
+                        <summary>Pickup &amp; driver details</summary>
+                        <dl>
+                            <dt>Driver</dt><dd>Grace M.</dd>
+                            <dt>Vehicle</dt><dd>Grey Mazda Demio</dd>
+                            <dt>Pickup point</dt><dd>Prestige Plaza</dd>
+                        </dl>
+                    </details>
+                    <a href="ride-detail.html" class="btn btn--ghost">View full details</a>
+                    <button type="button" class="btn btn--primary">Request to join</button>
+                </div>
+            </li>
+        </ul>
+
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-inner">
+            <address>
+                Questions? <a href="mailto:support@ridemyway.example">support@ridemyway.example</a>
+            </address>
+            <p><small>&copy; 2026 Ride-My-Way. Built with HTML &amp; CSS only — no JavaScript.</small></p>
+        </div>
+    </footer>
+
+</body>
+</html>
