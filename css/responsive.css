@@ -1,0 +1,33 @@
+/* ===================== SMALL-SCREEN ADJUSTMENTS ===================== */
+@media (max-width: 500px) {
+    .site-header {
+        padding: var(--space-xs) var(--space-md);
+    }
+
+    .stats {
+        gap: var(--space-sm);
+    }
+
+    .stat {
+        flex: 1 1 40%;
+        min-width: 0;
+        padding: var(--space-sm);
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 10px 6px;
+    }
+}
