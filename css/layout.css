@@ -1,0 +1,163 @@
+/* ===================== NAV TOGGLE STATE (checkbox hack, no JS) ===================== */
+.nav-toggle-input {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    color: var(--panel);
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* ===================== SITE HEADER ===================== */
+.site-header {
+    background-color: var(--ink);
+    padding: var(--space-sm) var(--space-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--panel);
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/* Brand mark: two stops on a route line, built from CSS, no image */
+.brand-mark {
+    display: inline-flex;
+    align-items: center;
+    width: 34px;
+    height: 10px;
+    position: relative;
+}
+
+.brand-mark::before,
+.brand-mark::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--amber);
+    top: 1px;
+}
+
+.brand-mark::before { left: 0; }
+.brand-mark::after { right: 0; }
+
+.brand-mark span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--amber);
+    margin-top: 4px;
+}
+
+.site-nav {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.site-nav a {
+    color: var(--panel);
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.site-nav a:hover {
+    color: var(--amber);
+}
+
+.site-nav a[aria-current="page"] {
+    border-bottom-color: var(--amber);
+    color: var(--amber);
+}
+
+.site-nav a:focus-visible {
+    outline: 3px solid var(--amber);
+    outline-offset: 3px;
+}
+
+/* ===================== PAGE SHELL ===================== */
+main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: var(--space-lg) var(--space-md) var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.page-intro {
+    max-width: 68ch;
+}
+
+.page-intro p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-top: var(--space-xs);
+}
+
+/* ===================== FOOTER ===================== */
+.page-footer {
+    background-color: var(--ink);
+    color: var(--panel);
+    padding: var(--space-lg) var(--space-md);
+}
+
+.footer-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.page-footer address {
+    font-style: normal;
+    color: #C7CDD6;
+}
+
+.page-footer a {
+    color: var(--amber);
+}
+
+/* ===================== MOBILE NAV ===================== */
+@media (max-width: 700px) {
+    .nav-toggle-label {
+        display: block;
+    }
+
+    .site-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: var(--space-sm);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: var(--ink);
+        padding: var(--space-md);
+    }
+
+    .nav-toggle-input:checked ~ .site-header .site-nav {
+        display: flex;
+    }
+}

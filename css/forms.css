@@ -1,0 +1,107 @@
+/* ===================== FORM STRUCTURE ===================== */
+fieldset {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+legend {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--ink);
+    padding: 0 8px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+    .form-grid--2col {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.field {
+    margin-bottom: var(--space-sm);
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.hint {
+    display: block;
+    color: var(--text-muted);
+    margin-top: 4px;
+    font-size: 0.85rem;
+}
+
+input, select, textarea, button {
+    font-family: var(--font-body);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="number"],
+input[type="datetime-local"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    background-color: var(--panel);
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="email"] {
+    border-left: 3px solid var(--ink);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: none;
+    border-color: var(--ink);
+    box-shadow: 0 0 0 3px rgba(20, 33, 61, 0.14);
+}
+
+/* Live validation feedback, no JS */
+input:not(:placeholder-shown):invalid {
+    border-color: var(--brick);
+}
+
+input:not(:placeholder-shown):valid {
+    border-color: var(--teal);
+}
+
+.radio-row, .checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: var(--space-xs);
+    font-weight: normal;
+}
+
+.radio-row input, .checkbox-row input {
+    width: auto;
+}
+
+.form-actions {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+    flex-wrap: wrap;
+}
