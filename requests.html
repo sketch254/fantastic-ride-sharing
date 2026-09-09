@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review and respond to ride requests on Ride-My-Way.">
+    <title>My Requests — Ride-My-Way</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <span class="brand-mark" aria-hidden="true"><span></span></span>
+            Ride-My-Way
+        </a>
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu">☰</label>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="rides.html">Find a Ride</a>
+            <a href="offer.html">Offer a Ride</a>
+            <a href="requests.html" aria-current="page">My Requests</a>
+            <a href="profile.html">Profile</a>
+            <a href="account.html">Account</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="page-intro">
+            <h1>Requests for your rides</h1>
+            <p>As the driver of Kilimani → CBD, review who wants to join and respond.</p>
+        </div>
+
+        <div class="panel">
+            <table>
+                <caption>Kilimani → CBD, tomorrow 7:30 AM</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Passenger</th>
+                        <th scope="col">Requested</th>
+                        <th scope="col">Pickup point</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Brian O.</td>
+                        <td><time datetime="2026-09-08T09:15">Today, 9:15 AM</time></td>
+                        <td>Yaya Centre gate</td>
+                        <td><span class="badge badge--pending">Pending</span></td>
+                        <td>
+                            <button type="button" class="btn btn--accept">Accept</button>
+                            <button type="button" class="btn btn--reject">Reject</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Faith N.</td>
+                        <td><time datetime="2026-09-08T10:02">Today, 10:02 AM</time></td>
+                        <td>Adams Arcade</td>
+                        <td><span class="badge badge--accepted">Accepted</span></td>
+                        <td><button type="button" class="btn" disabled>Accepted</button></td>
+                    </tr>
+                    <tr>
+                        <td>Peter K.</td>
+                        <td><time datetime="2026-09-08T11:40">Today, 11:40 AM</time></td>
+                        <td>Yaya Centre gate</td>
+                        <td><span class="badge badge--rejected">Rejected</span></td>
+                        <td><button type="button" class="btn" disabled>Rejected</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+    
+
+    <footer class="page-footer">
+        <div class="footer-inner">
+            <address>
+                Questions? <a href="mailto:support@ridemyway.example">support@ridemyway.example</a>
+            </address>
+            <p><small>&copy; 2026 Ride-My-Way. Built with HTML &amp; CSS only — no JavaScript.</small></p>
+        </div>
+    </footer>
+
+</body>
+</html>
