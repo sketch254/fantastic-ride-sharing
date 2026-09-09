@@ -3,9 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Ride-My-Way — find or offer a carpool ride across the city.">
+    <title>Ride-My-Way</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <span class="brand-mark" aria-hidden="true"><span></span></span>
+            Ride-My-Way
+        </a>
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu">☰</label>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="rides.html">Find a Ride</a>
+            <a href="offer.html">Offer a Ride</a>
+            <a href="requests.html">My Requests</a>
+            <a href="profile.html">Profile</a>
+            <a href="account.html">Account</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div>
+                <h1>Get there together.</h1>
+                <p>Ride-My-Way matches drivers with empty seats to passengers heading the same
+                direction — splitting the cost and the commute.</p>
+                <div class="hero__actions">
+                    <a href="rides.html" class="btn btn--primary">Find a ride</a>
+                    <a href="offer.html" class="btn btn--dark">Offer a ride</a>
+                </div>
+            </div>
+
+            <div class="hero__board" aria-label="Next departures">
+                <h2>Next departures</h2>
+                <div class="board-row">
+                    <span>Kilimani → CBD</span>
+                    <span class="seats">3 seats</span>
+                </div>
+                <div class="board-row">
+                    <span>Westlands → Karen</span>
+                    <span class="seats">1 seat</span>
+                </div>
+                <div class="board-row">
+                    <span>Ngong Rd → CBD</span>
+                    <span class="seats">4 seats</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq" aria-labelledby="faq-heading">
+            <div class="page-intro">
+                <h2 id="faq-heading">Questions before you ride</h2>
+            </div>
+
+            <details name="faq" open>
+                <summary>How do I request a ride?</summary>
+                <p>Open "Find a Ride," pick a departure, expand its details, and select "Request
+                to join." The driver reviews and responds to your request.</p>
+            </details>
+
+            <details name="faq">
+                <summary>How does payment work?</summary>
+                <p>Ride-My-Way doesn't process payments. Drivers and passengers settle up directly,
+                usually in cash at pickup.</p>
+            </details>
+
+            <details name="faq" id="terms-detail">
+                <summary>What's expected of riders and drivers?</summary>
+                <p>Show up on time for confirmed rides, keep ride details accurate, and treat
+                everyone in the car with respect.</p>
+            </details>
+        </section>
+
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-inner">
+            <address>
+                Questions? <a href="mailto:support@ridemyway.example">support@ridemyway.example</a>
+            </address>
+            <p><small>&copy; 2026 Ride-My-Way. Built with HTML &amp; CSS only — no JavaScript.</small></p>
+        </div>
+    </footer>
+
 </body>
 </html>
