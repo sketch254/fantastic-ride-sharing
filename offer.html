@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Offer a carpool ride on Ride-My-Way.">
+    <title>Offer a Ride — Ride-My-Way</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <span class="brand-mark" aria-hidden="true"><span></span></span>
+            Ride-My-Way
+        </a>
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu">☰</label>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="rides.html">Find a Ride</a>
+            <a href="offer.html" aria-current="page">Offer a Ride</a>
+            <a href="requests.html">My Requests</a>
+            <a href="profile.html">Profile</a>
+            <a href="account.html">Account</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="page-intro">
+            <h1>Offer a ride</h1>
+            <p>Have empty seats? Post your route and let passengers heading your way request
+            a spot.</p>
+        </div>
+
+        <form class="panel">
+            <div class="form-grid form-grid--2col">
+                <div class="field">
+                    <label for="origin">Pickup location</label>
+                    <input type="text" id="origin" name="origin" required>
+                </div>
+                <div class="field">
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" name="destination" required>
+                </div>
+                <div class="field">
+                    <label for="departure">Departure time</label>
+                    <input type="datetime-local" id="departure" name="departure" required>
+                </div>
+                <div class="field">
+                    <label for="seats">Available seats</label>
+                    <input type="number" id="seats" name="seats" min="1" max="8" value="1" required>
+                </div>
+                <div class="field">
+                    <label for="fare">Fare per seat (KSh)</label>
+                    <input type="number" id="fare" name="fare" min="0" step="10" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="notes">Notes for passengers</label>
+                <textarea id="notes" name="notes" rows="3" placeholder="e.g. AC available, no smoking"></textarea>
+                <span class="hint">Optional — arrival flexibility, luggage space, anything riders should know.</span>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn--primary">Post ride offer</button>
+                <button type="reset" class="btn btn--ghost">Clear form</button>
+            </div>
+        </form>
+
+    </main>
+
+    <footer class="page-footer">
+        <section class="footer-inner">
+            <address>
+                Questions? <a href="mailto:support@ridemyway.example">support@ridemyway.example</a>
+            </address>
+            <p><small>&copy; 2026 Ride-My-Way. Built with HTML &amp; CSS only — no JavaScript.</small></p>
+        </section>
+    </footer>
+
+</body>
+</html>
